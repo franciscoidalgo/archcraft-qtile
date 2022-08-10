@@ -1,0 +1,22 @@
+{
+    "wallpaper": "/usr/share/backgrounds/forest.jpg",
+    "foreground": "#C4C7C5",
+    "background": "#222D32",
+    "cursor": "#C4C7C5",
+    "black": "#263640",
+    "red": "#EC7875",
+    "green": "#61C766",
+    "yellow": "#FDD835",
+    "blue": "#42A5F5",
+    "magenta": "#BA68C8",
+    "cyan": "#4DD0E1",
+    "white": "#bfbaac",
+    "altblack": "#4a697d",
+    "altred": "#FB8784",
+    "altgreen": "#70D675",
+    "altyellow": "#FFE744",
+    "altblue": "#51B4FF",
+    "altmagenta": "#C979D7",
+    "altcyan": "#5CDFF0",
+    "altwhite": "#fdf6e3"
+}

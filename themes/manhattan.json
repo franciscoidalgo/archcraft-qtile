@@ -1,0 +1,22 @@
+{
+    "wallpaper": "/usr/share/backgrounds/manhattan.jpg",
+    "background": "#282f37",
+    "foreground": "#f1fcf9",
+    "cursor": "#f1fcf9",
+    "black": "#3C434B",
+    "red": "#db86ba",
+    "green": "#74dd91",
+    "yellow": "#e49186",
+    "blue": "#75dbe1",
+    "magenta": "#b4a1db",
+    "cyan": "#9ee9ea",
+    "white": "#f1fcf9",
+    "altblack": "#465463",
+    "altred": "#d04e9d",
+    "altgreen": "#4bc66d",
+    "altyellow": "#db695b",
+    "altblue": "#3dbac2",
+    "altmagenta": "#825ece",
+    "altcyan": "#62cdcd",
+    "altwhite": "#e0e5e5"
+}

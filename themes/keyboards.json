@@ -1,0 +1,22 @@
+{
+    "wallpaper": "/usr/share/backgrounds/keyboards.jpg",
+    "background": "#1d1f28",
+    "foreground": "#fdfdfd",
+    "cursor": "#fdfdfd",
+    "black": "#282a36",
+    "red": "#f37f97",
+    "green": "#5adecd",
+    "yellow": "#f2a272",
+    "blue": "#8897f4",
+    "magenta": "#c574dd",
+    "cyan": "#79e6f3",
+    "white": "#fdfdfd",
+    "altblack": "#414458",
+    "altred": "#ff4971",
+    "altgreen": "#26CDB8",
+    "altyellow": "#ff8037",
+    "altblue": "#556fff",
+    "altmagenta": "#b043d1",
+    "altcyan": "#3fdcee",
+    "altwhite": "#bebec1"
+}

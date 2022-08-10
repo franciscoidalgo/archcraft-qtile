@@ -1,0 +1,22 @@
+{
+    "wallpaper": "/usr/share/backgrounds/dracula.png",
+    "foreground": "#F8F8F2",
+    "background": "#282A36",
+    "cursor": "#F8F8F2",
+    "black": "#3C3E4A",
+    "red": "#FF5555",
+    "green": "#50FA7B",
+    "yellow": "#F1FA8C",
+    "blue": "#BD93F9",
+    "magenta": "#FF79C6",
+    "cyan": "#8BE9FD",
+    "white": "#BFBFBF",
+    "altblack": "#4D4D4D",
+    "altred": "#FF6E67",
+    "altgreen": "#5AF78E",
+    "altyellow": "#F4F99D",
+    "altblue": "#CAA9FA",
+    "altmagenta": "#FF92D0",
+    "altcyan": "#9AEDFE",
+    "altwhite": "#E6E6E6"
+}

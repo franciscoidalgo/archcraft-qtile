@@ -1,0 +1,22 @@
+{
+    "wallpaper": "/usr/share/backgrounds/light.jpg",
+    "background": "#fafafa",
+    "foreground": "#383a42",
+    "cursor": "#383a42",
+    "black": "#383a42",
+    "red": "#e45649",
+    "green": "#50a14f",
+    "yellow": "#c18401",
+    "blue": "#0184bc",
+    "magenta": "#a626a4",
+    "cyan": "#0997b3",
+    "white": "#909090",
+    "altblack": "#383a42",
+    "altred": "#e45649",
+    "altgreen": "#50a14f",
+    "altyellow": "#c18401",
+    "altblue": "#0184bc",
+    "altmagenta": "#a626a4",
+    "altcyan": "#0997b3",
+    "altwhite": "#909090"
+}

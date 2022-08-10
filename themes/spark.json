@@ -1,0 +1,22 @@
+{
+    "wallpaper": "/usr/share/backgrounds/spark.jpg",
+    "background": "#1e2541",
+    "foreground": "#eeffff",
+    "cursor": "#eeffff",
+    "black": "#323955",
+    "red": "#f0719b",
+    "green": "#5af7b0",
+    "yellow": "#ffa56b",
+    "blue": "#57c7ff",
+    "magenta": "#c792ea",
+    "cyan": "#89ddff",
+    "white": "#eeffff",
+    "altblack": "#354274",
+    "altred": "#f02e6e",
+    "altgreen": "#2ce592",
+    "altyellow": "#ff8537",
+    "altblue": "#1da0e2",
+    "altmagenta": "#a742ea",
+    "altcyan": "#47bae8",
+    "altwhite": "#dee6e7"
+}

@@ -1,0 +1,22 @@
+{
+    "wallpaper": "/usr/share/backgrounds/groot.jpg",
+    "foreground": "#e3e3e1",
+    "background": "#0f1318",
+    "cursor": "#e3e3e1",
+    "black": "#23282D",
+    "red": "#916738",
+    "green": "#98764A",
+    "yellow": "#699553",
+    "blue": "#A39E63",
+    "magenta": "#9C9B96",
+    "cyan": "#CCC8A5",
+    "white": "#e3e3e1",
+    "altblack": "#9e9e9d",
+    "altred": "#916738",
+    "altgreen": "#98764A",
+    "altyellow": "#699553",
+    "altblue": "#A39E63",
+    "altmagenta": "#9C9B96",
+    "altcyan": "#CCC8A5",
+    "altwhite": "#e3e3e1"
+}

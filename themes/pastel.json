@@ -1,0 +1,22 @@
+{
+    "wallpaper": "/usr/share/backgrounds/pastel.png",
+    "background": "#222D57",
+    "foreground": "#EBDDEB",
+    "cursor": "#EBDDEB",
+    "black": "#36416B",
+    "red": "#f0719b",
+    "green": "#5af7b0",
+    "yellow": "#ffa56b",
+    "blue": "#57c7ff",
+    "magenta": "#c792ea",
+    "cyan": "#89ddff",
+    "white": "#eeffff",
+    "altblack": "#414B75",
+    "altred": "#f02e6e",
+    "altgreen": "#2ce592",
+    "altyellow": "#ff8537",
+    "altblue": "#1da0e2",
+    "altmagenta": "#a742ea",
+    "altcyan": "#47bae8",
+    "altwhite": "#dee6e7"
+}

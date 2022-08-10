@@ -1,0 +1,22 @@
+{
+    "wallpaper": "/usr/share/backgrounds/rick.jpg",
+    "foreground": "#e5e0dc",
+    "background": "#0d0e0d",
+    "cursor": "#e5e0dc",
+    "black": "#232323",
+    "red": "#388D53",
+    "green": "#448E52",
+    "yellow": "#53AD9F",
+    "blue": "#5BC0BC",
+    "magenta": "#57C5D1",
+    "cyan": "#ACBEC0",
+    "white": "#e5e0dc",
+    "altblack": "#a09c9a",
+    "altred": "#388D53",
+    "altgreen": "#448E52",
+    "altyellow": "#53AD9F",
+    "altblue": "#5BC0BC",
+    "altmagenta": "#57C5D1",
+    "altcyan": "#ACBEC0",
+    "altwhite": "#e5e0dc"
+}

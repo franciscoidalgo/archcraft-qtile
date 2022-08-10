@@ -1,0 +1,22 @@
+{
+    "wallpaper": "/usr/share/backgrounds/bouquet.jpg",
+    "background": "#191D27",
+    "foreground": "#767D8A",
+    "cursor": "#767D8A",
+    "black": "#27292D",
+    "red": "#ec7875",
+    "green": "#61c766",
+    "yellow": "#fdd835",
+    "blue": "#42a5f5",
+    "magenta": "#ba68c8",
+    "cyan": "#4dd0e1",
+    "white": "#d8d8d8",
+    "altblack": "#3B3D41",
+    "altred": "#fb8784",
+    "altgreen": "#70d675",
+    "altyellow": "#ffe744",
+    "altblue": "#51b4ff",
+    "altmagenta": "#c979d7",
+    "altcyan": "#5cdff0",
+    "altwhite": "#fdf6e3"
+}

@@ -1,0 +1,22 @@
+{
+    "wallpaper": "/usr/share/backgrounds/tealize.png",
+    "background": "#232735",
+    "foreground": "#7C84A8",
+    "cursor": "#7C84A8",
+    "black": "#32363D",
+    "red": "#E06B74",
+    "green": "#98C379",
+    "yellow": "#E5C07A",
+    "blue": "#62AEEF",
+    "magenta": "#C778DD",
+    "cyan": "#55B6C2",
+    "white": "#ABB2BF",
+    "altblack": "#50545B",
+    "altred": "#EA757E",
+    "altgreen": "#A2CD83",
+    "altyellow": "#EFCA84",
+    "altblue": "#6CB8F9",
+    "altmagenta": "#D282E7",
+    "altcyan": "#5FC0CC",
+    "altwhite": "#B5BCC9"
+}
