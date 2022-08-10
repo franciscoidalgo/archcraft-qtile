@@ -85,7 +85,12 @@ keys = [
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key(
+        [mod],
+        "r",
+        lazy.spawncmd(),
+        desc="Spawn a command using a prompt widget",
+    ),
     # Custom scripts
     Key(
         [mod], "x", lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/powermenu"))
@@ -94,6 +99,19 @@ keys = [
         ["control", "mod1"],
         "t",
         lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/themes")),
+    ),
+    Key(
+        [mod], "p", lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/launcher"))
+    ),
+    Key(
+        [mod, "shift"],
+        "p",
+        lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/asroot")),
+    ),
+    Key(
+        ["mod1"],
+        "Tab",
+        lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/windows")),
     ),
 ]
 
@@ -134,34 +152,39 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="Iosevka Nerd Font", fontsize=12, padding=1, foreground=theme["foreground"]
+    font="Iosevka Nerd Font", fontsize=13, padding=1, foreground=theme["foreground"]
 )
 extension_defaults = widget_defaults.copy()
 
+separator = lambda: widget.TextBox(
+    text=" ◆ ",
+    background=theme["background"],
+    foreground=theme["foreground"],
+    padding=2,
+)
 
 screens = [
     Screen(
         top=bar.Bar(
             [
                 widget.CurrentLayout(
-                    background=theme["yellow"], foreground=theme["foreground"]
+                    background=theme["yellow"], foreground=theme["background"], width=65
                 ),
-                widget.TextBox(
-                    text=" ◆ ",
-                    background=theme["background"],
-                    foreground=theme["black"],
-                    padding=2,
-                ),
+                separator(),
                 widget.GroupBox(
                     disable_drag=True,
                     highlight_method="line",
                     highlight_color=theme["background"],
                     block_highlight_text_color=theme["blue"],
                     this_current_screen_border=theme["blue"],
+                    urgent_border=theme["red"],
+                    urgent_text=theme["red"],
                     padding=1,
                     active=theme["green"],
                 ),
+                separator(),
                 widget.Prompt(),
+                separator(),
                 widget.WindowName(),
                 widget.Chord(
                     chords_colors={
@@ -169,13 +192,10 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
                 widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                widget.QuickExit(),
+                widget.Clock(format=" %Y-%m-%d %I:%M %p", foreground=theme["red"]),
             ],
-            26,
+            28,
             background=theme["background"],
         ),
     ),

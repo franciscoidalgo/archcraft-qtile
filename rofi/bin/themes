@@ -35,7 +35,7 @@ theme_19=" Tealize"
 theme_20=" Wave"
 
 # Variable passed to rofi
-options="$random\n$default\n\n$theme_1\n$theme_2\n$theme_3\n$theme_4\n$theme_5\
+options="$default\n\n$theme_1\n$theme_2\n$theme_3\n$theme_4\n$theme_5\
 \n$theme_6\n$theme_7\n$theme_8\n$theme_9\n$theme_10\
 \n$theme_11\n$theme_12\n$theme_13\n$theme_14\n$theme_15\
 \n$theme_16\n$theme_17\n$theme_18\n$theme_19\n$theme_20"
@@ -64,34 +64,8 @@ set_style() {
     qtile cmd-obj -o cmd -f restart 
 }
 
-## Apply random theme
-random_theme() {
-	## Set you wallpaper directory here.
-	WALLDIR="`xdg-user-dir PICTURES`/wallpapers"
-	WALFILE="$HOME/.cache/wal/colors.sh"
-	
-	if [[ `which wal` ]]; then
-		dunstify -u low --replace=699 -i /usr/share/archcraft/icons/dunst/hourglass.png "Generating Colorscheme. Please wait..."
-		wal -q -n -s -t -e -i "$WALLDIR"
-		if [[ "$?" != 0 ]]; then
-			dunstify -u low --replace=699 -i /usr/share/archcraft/icons/dunst/palette.png "Failed to generate colorscheme."
-			exit
-		fi
-		if [[ -f "$WALFILE" ]]; then
-			cat "$WALFILE" > "$THEMEDIR"/current.bash
-			echo -e "\n# Don't Delete This File" >> "$THEMEDIR"/current.bash
-			bspc wm -r
-		fi
-	else
-		dunstify -u normal --replace=699 -i /usr/share/archcraft/icons/dunst/palette.png "'pywal' is not installed."
-	fi
-}
-
 chosen="$(echo -e "$options" | $rofi_cmd -p "Available themes : (20 + ∞)" -dmenu -selected-row 0)"
 case $chosen in
-    $random)
-        random_theme
-        ;;
     $default)
         set_style  'nord' 'Arc-Dark' 'Arc-Circle' 'Qogirr'
         ;;
