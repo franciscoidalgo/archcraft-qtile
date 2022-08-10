@@ -173,6 +173,7 @@ screens = [
                 separator(),
                 widget.GroupBox(
                     disable_drag=True,
+                    foreground=theme["foreground"],
                     highlight_method="line",
                     highlight_color=theme["background"],
                     block_highlight_text_color=theme["blue"],
@@ -181,6 +182,7 @@ screens = [
                     urgent_text=theme["red"],
                     padding=1,
                     active=theme["green"],
+                    inactive=theme["foreground"],
                 ),
                 separator(),
                 widget.Prompt(),
