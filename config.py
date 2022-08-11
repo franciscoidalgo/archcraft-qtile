@@ -310,9 +310,9 @@ wl_input_rules = None
 @hook.subscribe.startup
 def autostart():
     home = os.path.expanduser("~/.config/qtile/autostart.sh")
-    subprocess.Popen([home])
     subprocess.Popen(["feh", "--no-fehbg", "--bg-fill", theme["wallpaper"]])
     set_colors(theme)
+    subprocess.Popen([home])
 
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
