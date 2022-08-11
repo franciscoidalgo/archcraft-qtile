@@ -3,7 +3,7 @@
 ## Qtile config directory
 QTILE="$HOME/.config/qtile"
 
-## Export qtile/bin dir to PATH
+## Export qtile/scripts dir to PATH
 export PATH="${PATH}:$HOME/.config/qtile/scripts"
 
 # Kill if already running
@@ -26,6 +26,6 @@ xsetroot -cursor_name left_ptr
 # Start mpd
 exec mpd &
 
-# Start bspwm scripts
-bspcomp
-bspdunst
+# Start qtile scripts
+qtilecomp
+qtiledunst

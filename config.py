@@ -37,6 +37,8 @@ from themes.load_theme import theme
 
 mod = "mod4"
 terminal = guess_terminal()
+browser = "firefox"
+text_editor = "codium"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -91,28 +93,67 @@ keys = [
         lazy.spawncmd(),
         desc="Spawn a command using a prompt widget",
     ),
-    # Custom scripts
-    Key(
-        [mod], "x", lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/powermenu"))
-    ),
-    Key(
-        ["control", "mod1"],
-        "t",
-        lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/themes")),
-    ),
+    # Rofi
     Key(
         [mod], "p", lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/launcher"))
     ),
     Key(
-        [mod, "shift"],
-        "p",
-        lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/asroot")),
+        [mod], "x", lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/powermenu"))
+    ),
+    Key([mod], "m", lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/mpd"))),
+    Key(
+        [mod],
+        "s",
+        lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/screenshot")),
     ),
     Key(
         ["mod1"],
         "Tab",
         lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/windows")),
     ),
+    Key(
+        ["control", "mod1"],
+        "t",
+        lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/themes")),
+    ),
+    # Apps
+    Key(
+        [mod],
+        "b",
+        lazy.spawn(browser),
+    ),
+    Key(
+        [mod],
+        "f",
+        lazy.spawn("thunar"),
+    ),
+    Key(
+        [mod],
+        "e",
+        lazy.spawn(text_editor),
+    ),
+    Key(
+        [mod],
+        "c",
+        lazy.spawn("color-gpick"),
+    ),
+    # Terminal apps
+    Key(
+        ["control", "mod1"],
+        "v",
+        lazy.spawn(terminal + " -e vim"),
+    ),
+    Key(
+        ["control", "mod1"],
+        "h",
+        lazy.spawn(terminal + " -e htop"),
+    ),
+    Key(
+        ["control", "mod1"],
+        "r",
+        lazy.spawn(terminal + " -e ranger"),
+    ),
+    # TODO: Brightness & that kind of stuff (too lazy to do it rn)
 ]
 
 groups = [Group(i) for i in ["", "", "", "", "", "", "", ""]]
@@ -194,8 +235,25 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
+                widget.Mpd2(play_states={"pause": "", "play": "", "stop": ""}),
+                separator(),
+                widget.TextBox(" ", foreground=theme["blue"]),
+                widget.PulseVolume(),
+                separator(),
+                widget.TextBox(text="爵 ", foreground=theme["cyan"]),
+                widget.Net(format="{down} {up}"),
+                separator(),
+                # widget.Battery(
+                #     format="{char} {percent:2.0%}",
+                #     charge_char="",
+                #     discharge_char="",
+                #     empty_char="",
+                # ),
+                # separator(),
                 widget.Systray(),
-                widget.Clock(format=" %Y-%m-%d %I:%M %p", foreground=theme["red"]),
+                separator(),
+                widget.TextBox(" ", foreground=theme["red"]),
+                widget.Clock(format="%Y-%m-%d %I:%M %p"),
             ],
             28,
             background=theme["background"],
@@ -232,6 +290,7 @@ floating_layout = layout.Floating(
         Match(wm_class="makebranch"),  # gitk
         Match(wm_class="maketag"),  # gitk
         Match(wm_class="ssh-askpass"),  # ssh-askpass
+        Match(wm_class="floating-app"),  # custom class for floating apps
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
     ],

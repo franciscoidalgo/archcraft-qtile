@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
+import configparser
 import os
+
 import yaml
 
 
@@ -55,6 +57,33 @@ def set_rofi_colors(theme):
         )
 
 
+def set_dunst_color(theme):
+    dunst_config_path = os.path.expanduser("~/.config/qtile/dunstrc")
+    config = configparser.ConfigParser()
+    config.read(dunst_config_path)
+    config["urgency_low"] = {
+        "timeout": "2",
+        "background": f'"{theme["background"]}"',
+        "foreground": f'"{theme["foreground"]}"',
+        "frame_color": f'"{theme["blue"]}"',
+    }
+    config["urgency_normal"] = {
+        "timeout": "5",
+        "background": f'"{theme["background"]}"',
+        "foreground": f'"{theme["foreground"]}"',
+        "frame_color": f'"{theme["blue"]}"',
+    }
+    config["urgency_critical"] = {
+        "timeout": "0",
+        "background": f'"{theme["background"]}"',
+        "foreground": f'"{theme["foreground"]}"',
+        "frame_color": f'"{theme["red"]}"',
+    }
+    with open(dunst_config_path, "w") as dunst_config:
+        config.write(dunst_config)
+
+
 def main(theme):
     set_rofi_colors(theme)
     set_term_colors(theme)
+    set_dunst_color(theme)
