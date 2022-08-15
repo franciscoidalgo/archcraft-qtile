@@ -15,7 +15,9 @@ def choose_theme(themes):
     themes_string = themes_string.rstrip()
 
     command = os.path.expanduser("~/.config/qtile/scripts/themes")
-    pipe = subprocess.run([command, themes_string], capture_output=True, text=True)
+    pipe = subprocess.run(
+        [command, themes_string, str(len(themes))], capture_output=True, text=True
+    )
     selected_theme = re.match(r"\s*(\d+).+", pipe.stdout)
     selected_theme_index = int(selected_theme.group(1)) - 1
 
