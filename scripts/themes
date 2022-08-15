@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
+## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+
+CFGDIR="$HOME/.config"
+QTILEDIR="$CFGDIR/qtile"
+THEMEDIR="$QTILEDIR/themes"
+XFILE="$QTILEDIR/xsettingsd"
+
+rofi_cmd="rofi -theme $QTILEDIR/rofi/themes/themes.rasi"
+
+
+chosen="$(echo -e "$1" | $rofi_cmd -p "Available themes : (20 + ∞)" -dmenu -selected-row 0)"
+
+echo $chosen
