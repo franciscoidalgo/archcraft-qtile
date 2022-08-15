@@ -1,0 +1,22 @@
+{
+    "wallpaper": "/usr/share/backgrounds/whitesurdark.png",
+    "background": "#0c0e0f",
+    "foreground": "#edeff0",
+    "cursor": "#edeff0",
+    "black": "#232526",
+    "red": "#df5b61",
+    "green": "#78b892",
+    "yellow": "#de8f78",
+    "blue": "#6791c9",
+    "magenta": "#bc83e3",
+    "cyan": "#67afc1",
+    "white": "#e4e6e7",
+    "altblack": "#2c2e2f",
+    "altred": "#e8646a",
+    "altgreen": "#81c19b",
+    "altyellow": "#e79881",
+    "altblue": "#709ad2",
+    "altmagenta": "#c58cec",
+    "altcyan": "#70b8ca",
+    "altwhite": "#f2f4f5"
+}
