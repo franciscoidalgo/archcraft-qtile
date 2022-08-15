@@ -67,7 +67,7 @@ set_style() {
     qtile cmd-obj -o cmd -f restart 
 }
 
-chosen="$(echo -e "$options" | $rofi_cmd -p "Available themes : (20 + ∞)" -dmenu -selected-row 0)"
+chosen="$(echo -e "$options" | $rofi_cmd -p "Choose a theme" -dmenu -selected-row 0)"
 case $chosen in
     $default)
         set_style  'nord' 'Arc-Dark' 'Arc-Circle' 'Qogirr'
