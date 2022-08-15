@@ -10,7 +10,6 @@ XFILE="$QTILEDIR/xsettingsd"
 
 rofi_cmd="rofi -theme $QTILEDIR/rofi/themes/themes.rasi"
 
-
-chosen="$(echo -e "$1" | $rofi_cmd -p "Available themes : (20 + ∞)" -dmenu -selected-row 0)"
+chosen="$(echo -e "$1" | $rofi_cmd -p "Choose a theme" -dmenu -selected-row 0)"
 
 echo $chosen

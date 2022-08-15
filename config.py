@@ -34,6 +34,7 @@ from libqtile.utils import guess_terminal
 
 from scripts.qtilecolors import main as set_colors
 from themes.load_theme import theme
+from scripts.qtiletheme import change_theme
 
 mod = "mod4"
 terminal = guess_terminal()
@@ -111,11 +112,8 @@ keys = [
         "Tab",
         lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/windows")),
     ),
-    Key(
-        ["control", "mod1"],
-        "t",
-        lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/themes")),
-    ),
+    # Custom script for changing themes
+    Key(["control", "mod1"], "t", lazy.function(change_theme)),
     # Apps
     Key(
         [mod],

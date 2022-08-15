@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+CFGDIR="$HOME/.config"
+QTILEDIR="$CFGDIR/qtile"
+XFILE="$QTILEDIR/xsettingsd"
+
+sed -i -e "s|Net/ThemeName .*|Net/ThemeName \"$1\"|g" ${XFILE}
+sed -i -e "s|Net/IconThemeName .*|Net/IconThemeName \"$2\"|g" ${XFILE}
+sed -i -e "s|Gtk/CursorThemeName .*|Gtk/CursorThemeName \"$3\"|g" ${XFILE}

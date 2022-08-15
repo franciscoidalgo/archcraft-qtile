@@ -1,0 +1,22 @@
+{
+    "wallpaper": "/usr/share/backgrounds/gyarados.jpg",
+    "foreground": "#e5e0dc",
+    "background": "#0d0e0d",
+    "cursor": "#e5e0dc",
+    "black": "#2A2D34",
+    "red": "#A2462E",
+    "green": "#5E713D",
+    "yellow": "#86733B",
+    "blue": "#394C5D",
+    "magenta": "#855646",
+    "cyan": "#6E727D",
+    "white": "#CABABA",
+    "altblack": "#414550",
+    "altred": "#A2462E",
+    "altgreen": "#5E713D",
+    "altyellow": "#86733B",
+    "altblue": "#394C5D",
+    "altmagenta": "#855646",
+    "altcyan": "#6E727D",
+    "altwhite": "#CABABA"
+}
