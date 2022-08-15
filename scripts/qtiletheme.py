@@ -2,29 +2,33 @@
 
 import json
 import os
-import subprocess
 import re
+import subprocess
 
 
 def show_themes_options(themes):
     themes_string = ""
-    for theme in themes:
-        themes_string += f"  {theme}\n"
+    for i, theme in enumerate(themes):
+        themes_string += f"{(i + 1):2}  {theme['name']}\n"
+
+    themes_string = themes_string.rstrip()
 
     command = os.path.expanduser("~/.config/qtile/scripts/themes")
     pipe = subprocess.run([command, themes_string], capture_output=True, text=True)
-    selected_theme = re.match(r"\s+(.+)", pipe.stdout).group(1)
+    selected_theme = re.match(r"\s*(\d+)\s+(.+)", pipe.stdout)
+    selected_theme_index = int(selected_theme.group(1)) - 1
+    selected_theme_name = selected_theme.group(2)
+
+    print(selected_theme_index, selected_theme_name)
+    # theme = list(filter(lambda theme: theme["name"] == selected_theme_name, themes))
 
 
 def choose_theme():
-    themes_dir = os.path.expanduser("~/.config/qtile/themes")
-    themes_paths = []
-    with os.scandir(themes_dir) as td:
-        for entry in td:
-            if entry.name.endswith(".json"):
-                themes_paths.append(entry.path)
+    themes_path = os.path.expanduser("~/.config/qtile/themes.json")
+    with open(themes_path, "r") as themes_file:
+        themes = json.load(themes_file)
 
-    show_themes_options(themes_paths)
+    show_themes_options(themes)
     # themes = dict()
     # for theme in themes_paths:
     #     with open(theme, "r") as theme_json:

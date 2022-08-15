@@ -1,0 +1,163 @@
+[
+    {
+        "name": "Nord",
+        "color_scheme": " nord.json",
+        "widget_theme": " Arc-Dark",
+        "icon_theme": " Arc-Circle",
+        "cursor_theme": " Qogirr"
+    },
+    {
+        "name": "Beach",
+        "color_scheme": " beach.json",
+        "widget_theme": " Arc-Lighter",
+        "icon_theme": " Arc-Circle",
+        "cursor_theme": " Fluent"
+    },
+    {
+        "name": "Blade",
+        "color_scheme": " blade.json",
+        "widget_theme": " Blade",
+        "icon_theme": " Nordic-Folders",
+        "cursor_theme": " LyraS"
+    },
+    {
+        "name": "Bouquet",
+        "color_scheme": " bouquet.json",
+        "widget_theme": " Juno-mirage",
+        "icon_theme": " Luna-Dark",
+        "cursor_theme": " Future-dark"
+    },
+    {
+        "name": "Cyberpunk",
+        "color_scheme": " cyberpunk.json",
+        "widget_theme": " Cyberpunk",
+        "icon_theme": " Archcraft-Dark",
+        "cursor_theme": " LyraB"
+    },
+    {
+        "name": "Dracula",
+        "color_scheme": " dracula.json",
+        "widget_theme": " Dracula",
+        "icon_theme": " Nordic-Folders",
+        "cursor_theme": " Sweet"
+    },
+    {
+        "name": "Flowers",
+        "color_scheme": " flowers.json",
+        "widget_theme": " Kripton",
+        "icon_theme": " Zafiro",
+        "cursor_theme": " Fluent-dark"
+    },
+    {
+        "name": "Forest",
+        "color_scheme": " forest.json",
+        "widget_theme": " Adapta-Nokto",
+        "icon_theme": " Luv-Folders-Dark",
+        "cursor_theme": " Vimix"
+    },
+    {
+        "name": "Groot",
+        "color_scheme": " groot.json",
+        "widget_theme": " Groot",
+        "icon_theme": " Luna-Dark",
+        "cursor_theme": " Pear"
+    },
+    {
+        "name": "Gruvbox",
+        "color_scheme": " gruvbox.json",
+        "widget_theme": " Gruvbox",
+        "icon_theme": " Luna-Dark",
+        "cursor_theme": " Future-dark"
+    },
+    {
+        "name": "Hack",
+        "color_scheme": " hack.json",
+        "widget_theme": " Hack",
+        "icon_theme": " Hack",
+        "cursor_theme": " LyraB"
+    },
+    {
+        "name": "Keyboards",
+        "color_scheme": " keyboards.json",
+        "widget_theme": " Sweet-Dark",
+        "icon_theme": " Zafiro-Purple",
+        "cursor_theme": " Sweet"
+    },
+    {
+        "name": "Light",
+        "color_scheme": " light.json",
+        "widget_theme": " White",
+        "icon_theme": " Arc-Circle",
+        "cursor_theme": " Fluent-dark"
+    },
+    {
+        "name": "Manhattan",
+        "color_scheme": " manhattan.json",
+        "widget_theme": " Manhattan",
+        "icon_theme": " Luv-Folders-Dark",
+        "cursor_theme": " Vimix-dark"
+    },
+    {
+        "name": "Nordic",
+        "color_scheme": " nordic.json",
+        "widget_theme": " Nordic",
+        "icon_theme": " Nordic-Folders",
+        "cursor_theme": " Qogirr-dark"
+    },
+    {
+        "name": "Pastel",
+        "color_scheme": " pastel.json",
+        "widget_theme": " White",
+        "icon_theme": " Qogir",
+        "cursor_theme": " Qogirr-dark"
+    },
+    {
+        "name": "Rick",
+        "color_scheme": " rick.json",
+        "widget_theme": " Rick",
+        "icon_theme": " Zafiro",
+        "cursor_theme": " Vimix-dark"
+    },
+    {
+        "name": "Slime",
+        "color_scheme": " slime.json",
+        "widget_theme": " Slime",
+        "icon_theme": " Luv-Folders",
+        "cursor_theme": " Qogirr-dark"
+    },
+    {
+        "name": "Spark",
+        "color_scheme": " spark.json",
+        "widget_theme": " Spark",
+        "icon_theme": " Luv-Folders",
+        "cursor_theme": " Vimix"
+    },
+    {
+        "name": "Tealize",
+        "color_scheme": " tealize.json",
+        "widget_theme": " Juno-palenight",
+        "icon_theme": " Luv-Folders-Dark",
+        "cursor_theme": " Vimix"
+    },
+    {
+        "name": "Wave",
+        "color_scheme": " wave.json",
+        "widget_theme": " Wave",
+        "icon_theme": " Luv-Folders-Dark",
+        "cursor_theme": " Vimix"
+    },
+    {
+        "name": "Whitesur Dark",
+        "color_scheme": " whitesur_dark.json",
+        "widget_theme": " WhiteSur-Dark",
+        "icon_theme": " WhiteSur-dark",
+        "cursor_theme": " McMojave Cursors"
+    },
+    {
+        "name": "Whitesur Light",
+        "color_scheme": " whitesur_light.json",
+        "widget_theme": " WhiteSur-Light",
+        "icon_theme": " WhiteSur",
+        "cursor_theme": " McMojave Cursors"
+    }
+]
