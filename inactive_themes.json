@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Whitesur Dark",
+        "color_scheme": "whitesur_dark.json",
+        "widget_theme": "WhiteSur-Dark",
+        "icon_theme": "WhiteSur-dark",
+        "cursor_theme": "McMojave Cursors"
+    },
+    {
+        "name": "Whitesur Light",
+        "color_scheme": "whitesur_light.json",
+        "widget_theme": "WhiteSur-Light",
+        "icon_theme": "WhiteSur",
+        "cursor_theme": "McMojave Cursors"
+    }
+]

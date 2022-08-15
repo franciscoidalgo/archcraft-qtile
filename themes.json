@@ -147,24 +147,17 @@
         "cursor_theme": "Vimix"
     },
     {
-        "name": "Whitesur Dark",
-        "color_scheme": "whitesur_dark.json",
-        "widget_theme": "WhiteSur-Dark",
-        "icon_theme": "WhiteSur-dark",
-        "cursor_theme": "McMojave Cursors"
-    },
-    {
-        "name": "Whitesur Light",
-        "color_scheme": "whitesur_light.json",
-        "widget_theme": "WhiteSur-Light",
-        "icon_theme": "WhiteSur",
-        "cursor_theme": "McMojave Cursors"
-    },
-    {
         "name": "Gyarados",
         "color_scheme": "pokemon.json",
         "widget_theme": "Kripton",
         "icon_theme": "Zafiro-Blue-Dark",
         "cursor_theme": "Fluent-dark"
+    },
+    {
+        "name": "Macchiato",
+        "color_scheme": "macchiato.json",
+        "widget_theme": "Catppuccin-Macchiato",
+        "icon_theme": "Papirus-Dark",
+        "cursor_theme": "Catppuccin-Macchiato-Dark"
     }
 ]
