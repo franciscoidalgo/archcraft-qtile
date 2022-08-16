@@ -10,10 +10,10 @@ export PATH="${PATH}:$HOME/.config/qtile/scripts"
 killall -9 xsettingsd dunst xfce4-power-manager
 
 # Lauch xsettingsd daemon
-xsettingsd --config=$HOME/.config/qtile/xsettingsd &
+xsettingsd --config="$QTILE"/xsettingsd &
 
 # polkit agent
-if [[ ! `pidof xfce-polkit` ]]; then
+if [[ ! $(pidof xfce-polkit) ]]; then
 	/usr/lib/xfce-polkit/xfce-polkit &
 fi
 
@@ -21,7 +21,11 @@ fi
 xfce4-power-manager &
 
 # Fix cursor
-xsetroot -cursor_name left_ptr
+(
+	lxappearance &
+	sleep 0.5
+	pkill lxappearance
+)
 
 # Start mpd
 exec mpd &
