@@ -20,13 +20,6 @@ fi
 # Enable power management
 xfce4-power-manager &
 
-# Fix cursor
-(
-	lxappearance &
-	sleep 0.5
-	pkill lxappearance
-)
-
 # Start mpd
 exec mpd &
 
