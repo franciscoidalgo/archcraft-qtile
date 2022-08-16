@@ -154,7 +154,9 @@ keys = [
     # TODO: Brightness & that kind of stuff (too lazy to do it rn)
 ]
 
-groups = [Group(i) for i in ["", "", "", "", "", "", "", ""]]
+groups = [Group(i) for i in ["", "", "", "", "", "", ""]]
+
+groups.append(Group("", matches=[Match(wm_class="Lxappearance")]))
 
 for i, g in enumerate(groups, start=1):
     keys.extend(

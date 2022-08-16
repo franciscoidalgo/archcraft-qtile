@@ -17,6 +17,10 @@ if [[ ! $(pidof xfce-polkit) ]]; then
 	/usr/lib/xfce-polkit/xfce-polkit &
 fi
 
+# temporal fix for cursor
+pkill lxappearance
+lxappearance &
+
 # Enable power management
 xfce4-power-manager &
 
