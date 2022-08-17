@@ -141,6 +141,7 @@ element.selected.urgent {
 }
 
 element.selected.urgent {
+  background-color: @selected;
   border-color: @selected;
 }
 
@@ -152,5 +153,6 @@ element.selected.active {
 }
 
 element.selected.active {
+  background-color: @selected;
   border-color: @selected;
 }
