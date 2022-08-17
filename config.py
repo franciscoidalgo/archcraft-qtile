@@ -102,6 +102,7 @@ keys = [
         [mod], "x", lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/powermenu"))
     ),
     Key([mod], "m", lazy.spawn(os.path.expanduser("~/.config/qtile/rofi/bin/mpd"))),
+    Key([mod], "n", lazy.spawn("networkmanager_dmenu")),
     Key(
         [mod],
         "s",

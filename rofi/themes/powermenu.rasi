@@ -3,15 +3,13 @@
 
 configuration {
     show-icons:                     false;
-    display-drun: 					"";
-    drun-display-format:            "{icon} {name}";
-    disable-history:                false;
 	click-to-exit: 					true;
 }
 
 @import "font.rasi"
 @import "colors.rasi"
 
+/*****----- Main Window -----*****/
 window {
     transparency:                   "real";
     background-color:               @background;
@@ -24,46 +22,23 @@ window {
     anchor:                         center;
     x-offset:                       0;
     y-offset:                       0;
+    border-radius:                  8px;
 }
 
-prompt {
-    enabled: 						true;
-	margin: 						0px 0px 0px 8px;
-    padding:    					6px 0px 6px 0px;
-	background-color: 				@background;
-	text-color: 					@foreground;
-    border:                  		0px 0px 0px 0px;
-    border-color:                  	@selected;
-    border-radius:                  0px;
-}
-
-textbox-prompt-colon {
-	expand: 						false;
-	str: 							"";
-    border-radius:                  0px;
-    background-color:               @selected;
-    text-color:                     @background;
-    padding:    					6px 10px 6px 10px;
-	font:							"Iosevka Nerd Font 10";
-}
-
-entry {
+/*****----- Main Box -----*****/
+mainbox {
     background-color:               @background;
-    text-color:                     @background;
-    placeholder-color:              @background;
-    placeholder:                    "";
-    expand:                         true;
-    horizontal-align:               0;
-    blink:                          false;
-    padding:                        6px;
+    children:                       [ inputbar, listview ];
+    spacing:                       	10px;
+    padding:                        10px;
 }
 
+/*****----- Inputbar -----*****/
 inputbar {
 	children: 						[ textbox-prompt-colon, prompt ];
     spacing:                        0;
     background-color:               @background;
     text-color:                     @foreground;
-    border:                  		0px 0px 1px 0px;
     border-radius:                  0px;
     border-color:                  	@selected;
     expand:                         false;
@@ -72,13 +47,27 @@ inputbar {
     position:                       center;
 }
 
-case-indicator {
-    background-color:               @background;
-    text-color:                     @foreground;
-    spacing:                        0;
+textbox-prompt-colon {
+	expand: 						false;
+	str: 							"Powermenu";
+    border-radius:                  80%;
+    text-color:                     @background;
+    background-color:               @urgent;
+    padding:    					6px 10px 6px 10px;
+	font:							"Iosevka Nerd Font 10";
 }
 
+prompt {
+    enabled: 						true;
+	margin: 						0px 0px 0px 8px;
+    padding:    					6px 0px 6px 0px;
+	background-color: 				@background;
+	text-color: 					@foreground;
+    border-color:                  	@selected;
+    border-radius:                  0px;
+}
 
+/*****----- Listview -----*****/
 listview {
     background-color:               @background;
     columns:                        1;
@@ -89,47 +78,21 @@ listview {
     layout:                         horizontal;
 }
 
-mainbox {
-    background-color:               @background;
-    children:                       [ inputbar, listview ];
-    spacing:                       	10px;
-    padding:                        10px;
-}
-
+/*****----- Elements -----*****/
 element {
     background-color:               @background;
     text-color:                     @foreground;
     orientation:                    horizontal;
     border:                  		1px;
-    border-radius:                  0px;
+    border-radius:                  30px;
     border-color:                  	@selected;
     padding:                        23.5px 25px 23.5px 25px;
-}
-
-element-icon {
-    background-color: 				inherit;
-    text-color:       				inherit;
-    horizontal-align:               0.5;
-    vertical-align:                 0.5;
-    size:                           0px;
-    border:                         0px;
-}
-
-element-text {
-    background-color: 				inherit;
-    text-color:       				inherit;
-	font:							"feather 14";
-    expand:                         true;
-    horizontal-align:               0.5;
-    vertical-align:                 0.5;
-    margin:                         0px 0px 0px 0px;
 }
 
 element selected {
     background-color:               @selected;
     text-color:                     @background;
     border:                  		0px;
-    border-radius:                  0px;
     border-color:                  	@selected;
 }
 
@@ -153,4 +116,23 @@ element.selected.active {
 
 element.selected.active {
   border-color: @selected;
+}
+
+element-icon {
+    background-color: 				inherit;
+    text-color:       				inherit;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    size:                           0px;
+    border:                         0px;
+}
+
+element-text {
+    background-color: 				inherit;
+    text-color:       				inherit;
+	font:							"feather 14";
+    expand:                         true;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         0px 0px 0px 0px;
 }
