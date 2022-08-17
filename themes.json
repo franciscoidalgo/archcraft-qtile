@@ -159,5 +159,12 @@
         "widget_theme": "Catppuccin-Macchiato",
         "icon_theme": "Papirus-Dark",
         "cursor_theme": "Catppuccin-Macchiato-Dark"
+    },
+    {
+        "name": "Latte",
+        "color_scheme": "latte.json",
+        "widget_theme": "Catppuccin-Latte",
+        "icon_theme": "Papirus-Light",
+        "cursor_theme": "Catppuccin-Latte-Dark"
     }
 ]

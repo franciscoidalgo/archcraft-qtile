@@ -1,0 +1,22 @@
+{
+    "wallpaper": "/usr/share/backgrounds/flamingo_unicat.png",
+    "foreground": "#4C4F69",
+    "background": "#EFF1F5",
+    "cursor": "#DC8A78",
+    "black": "#5C5F77",
+    "red": "#D20F39",
+    "green": "#40A02B",
+    "yellow": "#DF8E1D",
+    "blue": "#1E66F5",
+    "magenta": "#EA76CB",
+    "cyan": "#179299",
+    "white": "#ACB0BE",
+    "altblack": "#6C6F85",
+    "altred": "#D20F39",
+    "altgreen": "#40A02B",
+    "altyellow": "#DF8E1D",
+    "altblue": "#1E66F5",
+    "altmagenta": "#EA76CB",
+    "altcyan": "#179299",
+    "altwhite": "#BCC0CC"
+}
