@@ -152,19 +152,5 @@
         "widget_theme": "Kripton",
         "icon_theme": "Zafiro-Blue-Dark",
         "cursor_theme": "Fluent-dark"
-    },
-    {
-        "name": "Macchiato",
-        "color_scheme": "macchiato.json",
-        "widget_theme": "Catppuccin-Macchiato",
-        "icon_theme": "Papirus-Dark",
-        "cursor_theme": "Catppuccin-Macchiato-Dark"
-    },
-    {
-        "name": "Latte",
-        "color_scheme": "latte.json",
-        "widget_theme": "Catppuccin-Latte",
-        "icon_theme": "Papirus-Light",
-        "cursor_theme": "Catppuccin-Latte-Dark"
     }
 ]
