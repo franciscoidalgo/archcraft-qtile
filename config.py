@@ -35,6 +35,7 @@ from libqtile.utils import guess_terminal
 from scripts.qtilecolors import main as set_colors
 from themes.load_theme import theme
 from scripts.qtiletheme import change_theme
+from playerctl import PlayerCtl
 
 mod = "mod4"
 terminal = guess_terminal()
@@ -230,7 +231,17 @@ screens = [
                 widget.Prompt(cursor_color=theme["cursor"]),
                 separator(),
                 widget.Spacer(),
-                widget.Mpd2(play_states={"pause": "", "play": "", "stop": ""}),
+                widget.TextBox("\ue0b6", padding=0, fontsize=26),
+                # widget.Mpd2(
+                #     play_states={"pause": "", "play": "", "stop": ""},
+                #     background=theme["foreground"],
+                #     foreground=theme["background"],
+                # ),
+                PlayerCtl(
+                    background=theme["foreground"],
+                    foreground=theme["background"],
+                ),
+                widget.TextBox("\ue0b4", padding=0, fontsize=26),
                 widget.Spacer(),
                 widget.TextBox(" ", foreground=theme["blue"]),
                 widget.PulseVolume(),
