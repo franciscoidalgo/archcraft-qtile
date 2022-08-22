@@ -232,14 +232,14 @@ screens = [
                 separator(),
                 widget.Spacer(),
                 widget.TextBox("\ue0b6", padding=0, fontsize=26),
-                # widget.Mpd2(
-                #     play_states={"pause": "", "play": "", "stop": ""},
-                #     background=theme["foreground"],
-                #     foreground=theme["background"],
-                # ),
                 PlayerCtl(
                     background=theme["foreground"],
                     foreground=theme["background"],
+                    mouse_callbacks={
+                        "Button1": lazy.spawn(
+                            os.path.expanduser("~/.config/qtile/rofi/bin/mpd")
+                        )
+                    },
                 ),
                 widget.TextBox("\ue0b4", padding=0, fontsize=26),
                 widget.Spacer(),
