@@ -236,7 +236,10 @@ screens = [
                 widget.PulseVolume(),
                 separator(),
                 widget.TextBox(text="爵 ", foreground=theme["cyan"]),
-                widget.Net(format="{down} {up}"),
+                widget.Net(
+                    format="{down} {up}",
+                    mouse_callbacks={"Button1": lazy.spawn("nmd")},
+                ),
                 separator(),
                 # widget.Battery(
                 #     format="{char} {percent:2.0%}",
