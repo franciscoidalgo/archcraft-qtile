@@ -21,10 +21,12 @@ active=""
 urgent=""
 
 # Gets the current status of mpd
-status="$(mpc status)"
+status="$(playerctl status)"
+shuffle_status="$(playerctl shuffle)"
+loop_status="$(playerctl loop)"
 
 # Defines the Play / Pause option content
-if [[ $status == *"[playing]"* ]]; then
+if [[ $status == "Playing" ]]; then
 	toggle="$button_pause"
 else
 	toggle="$button_play"
@@ -32,20 +34,24 @@ fi
 
 # Display if repeat mode is on / off
 tog_repeat="$button_repeat"
-if [[ $status == *"repeat: on"* ]]; then
+if [[ $loop_status == "Playlist" ]]; then
     active="-a 4"
-elif [[ $status == *"repeat: off"* ]]; then
+    toggle_loop="None"
+elif [[ $loop_status == "None" ]]; then
     urgent="-u 4"
+    toggle_loop="Playlist"
 else
     tog_repeat="$button_error"
 fi
 
 # Display if random mode is on / off
 tog_random="$button_shuffle"
-if [[ $status == *"random: on"* ]]; then
+if [[ $shuffle_status == "On" ]]; then
     [ -n "$active" ] && active+=",5" || active="-a 5"
-elif [[ $status == *"random: off"* ]]; then
+    toggle_shuffle="Off"
+elif [[ $shuffle_status == "Off" ]]; then
     [ -n "$urgent" ] && urgent+=",5" || urgent="-u 5"
+    toggle_shuffle="On"
 else
     tog_random="$button_error"
 fi
@@ -54,31 +60,42 @@ fi
 options="$toggle\n$button_stop\n$button_previous\n$button_next\n$tog_repeat\n$tog_random"
 
 # Get the current playing song
-current=$(mpc current)
+current=$(playerctl metadata --format "{{ artist }} - {{ trunc(title, 40) }}")
 # If mpd isn't running it will return an empty string, we don't want to display that
 if [[ -z "$current" ]]; then
     current="None"
 fi
 
+show_msg() {
+	rofi -theme "$DIR"/rofi/themes/askpass.rasi -e "Not valid for current player"
+}
+
+
 # Spawn the mpd menu with the "Play / Pause" entry selected by default
 chosen="$(echo -e "$options" | $rofi_cmd -p "$current" -dmenu $active $urgent -selected-row 0)"
 case $chosen in
     $button_previous)
-        mpc -q prev && kunst --size 60x60 --silent
+        playerctl previous
         ;;
     $toggle)
-        mpc -q toggle && kunst --size 60x60 --silent
+        playerctl play-pause
         ;;
     $button_stop)
-        mpc -q stop
+        playerctl stop
         ;;
     $button_next)
-        mpc -q next && kunst --size 60x60 --silent
+        playerctl next
         ;;
     $tog_repeat)
-        mpc -q repeat
+       playerctl loop $toggle_loop
+       if [[ $? != 0 ]]; then
+            show_msg
+        fi
         ;;
     $tog_random)
-        mpc -q random
+        playerctl shuffle $toggle_shuffle
+        if [[ $? != 0 ]]; then
+            show_msg
+        fi
         ;;
 esac
