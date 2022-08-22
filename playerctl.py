@@ -1,6 +1,8 @@
+from html import escape
+
+from gi.repository import GLib
+from gi.repository import Playerctl as Pctl
 from libqtile.widget import base
-from subprocess import run
-import html
 
 
 class PlayerCtl(base.ThreadPoolText):
@@ -14,15 +16,6 @@ class PlayerCtl(base.ThreadPoolText):
         self.add_defaults(PlayerCtl.defaults)
 
     def poll(self):
-        pipe = run(
-            [
-                "playerctl",
-                "metadata",
-                "--format",
-                "{{ artist }} - {{ trunc(title, 40) }}",
-            ],
-            capture_output=True,
-            text=True,
-        )
-        formatted = " " + pipe.stdout.strip().replace("&", "&amp;")
-        return formatted
+        player = Pctl.Player.new()
+        formatted = f" {player.get_artist()} - {player.get_title()}"
+        return escape(formatted)
