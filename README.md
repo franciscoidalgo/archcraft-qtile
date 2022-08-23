@@ -4,9 +4,9 @@ Qtile port for most of bspwm scripts from Archcraft. Some are just copy&paste, o
 I might summarize everything later.
 
 https://www.youtube.com/watch?v=yL-S7Q698a8
-
-![Screenshot_2022-08-16-22-24-37_1920x984](https://user-images.githubusercontent.com/49107244/185019173-50e105a8-eb0e-4552-88a8-8bbe85be213a.png)
-![Screenshot_2022-08-16-22-41-44_1920x984](https://user-images.githubusercontent.com/49107244/185019177-6c28fc4b-a4e9-4bad-b84c-441ca8e9d264.png)
-![Screenshot_2022-08-16-22-42-39_1920x984](https://user-images.githubusercontent.com/49107244/185019183-92c325d1-135a-4f18-8de3-4de2fa8a1a8b.png)
-![Screenshot_2022-08-16-22-43-11_1920x984](https://user-images.githubusercontent.com/49107244/185019186-82dc33a8-a92c-4225-afbd-223289fba04a.png)
-![Screenshot_2022-08-16-23-10-01_1920x984](https://user-images.githubusercontent.com/49107244/185019187-9b7adf4a-20c0-4e5c-952c-5fc29a7630f2.png)
+![Screenshot_2022-08-23-01-47-05_1920x1080](https://user-images.githubusercontent.com/49107244/186073057-75e31de1-5e58-44f6-99d5-233740f9afa0.png)
+![Screenshot_2022-08-23-01-48-15_1920x1080](https://user-images.githubusercontent.com/49107244/186073061-fd45a04d-a32d-49c8-9349-c7639f3ca69b.png)
+![Screenshot_2022-08-23-01-49-20_1920x1080](https://user-images.githubusercontent.com/49107244/186073063-68a27543-633c-493c-8bd2-bfa26c22643d.png)
+![Screenshot_2022-08-23-01-52-24_1920x1080](https://user-images.githubusercontent.com/49107244/186073064-1840448c-20fc-4bee-9aa8-5f824958350e.png)
+![Screenshot_2022-08-23-01-53-33_1920x1080](https://user-images.githubusercontent.com/49107244/186073067-7fc63ab4-af93-4c3d-afa9-0513f8f82a2a.png)
+![Screenshot_2022-08-23-01-54-30_1920x1080](https://user-images.githubusercontent.com/49107244/186073070-d8a39831-a540-4844-91b2-32db8ee681b0.png)
