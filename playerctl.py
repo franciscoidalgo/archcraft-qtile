@@ -11,17 +11,20 @@ class PlayerCtl(base.ThreadPoolText):
     ]
 
     def __init__(self, **config):
-        super().__init__("Hola", **config)
+        super().__init__("Initializing", **config)
         self.add_defaults(PlayerCtl.defaults)
 
     def poll(self):
-        player = Pctl.Player.new()
-        status = player.props.playback_status
-        if status == 0:
-            symbol = ""
-        elif status == 1:
-            symbol = ""
-        else:
-            symbol = ""
-        formatted = f"{symbol} {player.get_artist()} - {player.get_title()}"
-        return escape(formatted)
+        try:
+            player = Pctl.Player.new()
+            status = player.props.playback_status
+            if status == 0:
+                symbol = ""
+            elif status == 1:
+                symbol = ""
+            else:
+                symbol = ""
+            formatted = f"{symbol} {player.get_artist()} - {player.get_title()}"
+            return escape(formatted)
+        except:
+            return "No device playing"

@@ -25,9 +25,9 @@ lxappearance &
 xfce4-power-manager &
 
 # Start mpd
+playerctld daemon
 exec mpd &
 mpDris2 &
-playerctld daemon
 
 # Start qtile scripts
 qtilecomp
